@@ -1,9 +1,4 @@
-//
-//  SceneDelegate.swift
-//  FirstProject
-//
-//  Created by Andrew on 26.04.2024.
-//
+
 
 import UIKit
 

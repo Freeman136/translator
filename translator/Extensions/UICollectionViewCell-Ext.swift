@@ -1,9 +1,3 @@
-//
-//  UICollectionViewCell-Ext.swift
-//  FirstProject
-//
-//  Created by Andrew on 17.05.2024.
-//
 
 import UIKit
 

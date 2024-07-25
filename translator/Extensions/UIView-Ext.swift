@@ -1,9 +1,3 @@
-//
-//  UIView-Ext.swift
-//  FirstProject
-//
-//  Created by Алмаз Рахматуллин on 02.05.2024.
-//
 
 import UIKit
 

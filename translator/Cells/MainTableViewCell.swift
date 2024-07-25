@@ -1,9 +1,3 @@
-//
-//  MainTableViewCell.swift
-//  FirstProject
-//
-//  Created by Andrew on 27.04.2024.
-//
 
 import UIKit
 

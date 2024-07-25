@@ -1,9 +1,3 @@
-//
-//  Network-ext.swift
-//  FirstProject
-//
-//  Created by Andrew on 20.07.2024.
-//
 
 
 import Foundation

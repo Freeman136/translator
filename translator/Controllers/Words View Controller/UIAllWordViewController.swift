@@ -1,7 +1,4 @@
 
-
-
-
 import UIKit
 import SDWebImage
 import RealmSwift
@@ -59,7 +56,6 @@ class UIAllWordViewController: ViewController {
         collectionView.backgroundColor = .clear
         
         collectionView.register(RoundedImageCell.self, forCellWithReuseIdentifier: RoundedImageCell.identifier)
-        // Header регистрация
         collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.identifier)
     }
     
@@ -73,7 +69,6 @@ class UIAllWordViewController: ViewController {
     }
 }
 
-// MARK: - StorageManager.shared.add
 
 extension UIAllWordViewController: AddNewWordControllerDelegate {
     
@@ -119,7 +114,7 @@ extension UIAllWordViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 44) // Пример размера заголовка
+        return CGSize(width: collectionView.frame.width, height: 44)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)  {
@@ -148,7 +143,6 @@ extension UIAllWordViewController {
             
         }
         
-        // MARK: - StorageManager.shared. Удалить
         
         let deleteAction = UIAlertAction(title: "Удалить", style: .destructive) {_ in
             
@@ -156,11 +150,10 @@ extension UIAllWordViewController {
             StorageManager.shared.delete(word: wordToDelete)
             self.wordsArray = StorageManager.shared.getRealmData()
             
-            // MARK: - StorageManager.shared. getWords обновить слова
-            
             self.collectionView.reloadData()
             
         }
+        
         let cancelAction = UIAlertAction(title: "Отменить", style: .cancel){_ in
             
         }
