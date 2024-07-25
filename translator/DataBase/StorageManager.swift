@@ -1,16 +1,8 @@
-//
-//  StorageManager.swift
-//  FirstProject
-//
-//  Created by Andrew on 05.07.2024.
-//
 
 import Foundation
 import RealmSwift
 
 final class StorageManager {
-    
-    
     
     private init() {
         let version: UInt64 = 1
@@ -32,44 +24,34 @@ final class StorageManager {
     static var shared: StorageManager = StorageManager()
     private let realm: Realm
     
-    // get
     func getRealmData<T: Object>() -> [T] {
         let arrayWords = realm.objects(T.self)
         return Array(arrayWords)
     }
-    //
     func getWords1<T>() -> [T] where T: Object {
         let arrayWords = realm.objects(T.self)
         return Array(arrayWords)
     }
-    
-    // add
-    
+
     func add( _ object: Object) {
         try! realm.write({
             realm.add(object)
         })
     }
     
-    
-    
-    // update
+
     func update<Result>(_ completion: () throws -> Result) {
         
         try! realm.write(completion)
     }
     
-    // update
     func update( _ object: Object) {
         
         try! realm.write{
             realm.add(object, update: .modified)
         }
     }
-    
-    
-    // delete
-    
+
     func delete(word: Object) {
         
         try! realm.write{

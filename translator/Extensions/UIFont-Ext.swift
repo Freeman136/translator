@@ -1,9 +1,3 @@
-//
-//  UIFont-Ext.swift
-//  FirstProject
-//
-//  Created by Andrew on 05.07.2024.
-//
 
 import UIKit
 

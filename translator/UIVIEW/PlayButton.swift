@@ -1,9 +1,3 @@
-//
-//  PlayButton.swift
-//  FirstProject
-//
-//  Created by Andrew on 10.05.2024.
-//
 
 import UIKit
 
@@ -84,6 +78,3 @@ class PlayButton: UIView {
         print("play sound")
     }
 }
-
-
-//MARK: - SwiftUI

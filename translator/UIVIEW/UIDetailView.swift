@@ -1,9 +1,3 @@
-//
-//  DetailCustomCell.swift
-//  FirstProject
-//
-//  Created by Andrew on 30.04.2024.
-//
 
 import UIKit
 

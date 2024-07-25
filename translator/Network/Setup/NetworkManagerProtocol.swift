@@ -1,9 +1,3 @@
-//
-//  NetworkManagerProtocol.swift
-//  FirstProject
-//
-//  Created by Andrew on 23.07.2024.
-//
 
 import Foundation
 import UIKit

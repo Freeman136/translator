@@ -1,9 +1,3 @@
-//
-//  CellLoadImages.swift
-//  FirstProject
-//
-//  Created by Andrew on 29.05.2024.
-//
 
 import UIKit
 import SDWebImage
@@ -55,11 +49,8 @@ class CellLoadImages: UICollectionViewCell {
         layer.borderColor = UIColor.orange.cgColor
         layer.borderWidth = 0
     }
-    
-//    func configure(with url: URL) {
-//        iconImageView.sd_setImage(with: url, completed: nil)
-//    }
-//    
+
+
     func setCheckmarkVisible(_ visible: Bool) {
         checkMarkImageView.isHidden = !visible
     }

@@ -1,9 +1,4 @@
-//
-//  RoundedImageCell.swift
-//  FirstProject
-//
-//  Created by Andrew on 14.05.2024.
-//
+
 
 import UIKit
 

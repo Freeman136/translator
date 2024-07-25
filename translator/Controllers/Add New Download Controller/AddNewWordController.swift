@@ -1,8 +1,3 @@
-//
-//  AddNewWordController.swift
-//  FirstProject
-//
-//  Created by Andrew on 19.05.2024.
 
 import UIKit
 import SDWebImage
@@ -25,7 +20,6 @@ final class AddNewWordController: ViewController {
     
     private let editingWord: Word?
     private var currentImage: Data?
-//    let networkManager = Network.shared
     private var urlImage: URL?
     
     private let myWord = UIDetailView(title: "Слово", subtitleLabel: "на вашем языке")
@@ -70,7 +64,6 @@ final class AddNewWordController: ViewController {
     }
     
     private func loadImage(from url: URL) {
-        // Используем SDWebImage для загрузки изображения
         galleryView.image = nil
         galleryView.fillImageLoad.sd_setImage(with: url, completed: nil)    }
     
@@ -140,10 +133,8 @@ final class AddNewWordController: ViewController {
         let image = galleryView.image?.jpegData(compressionQuality: 1.0)
         
         let newWord = Word(my: wordText, learn: learnText, image: image)
-        // MARK: - navigationController?.popViewController
 
         if let currentWord = editingWord {
-            //editing
             newWord._id = currentWord._id
             StorageManager.shared.update(newWord)
             
@@ -151,7 +142,6 @@ final class AddNewWordController: ViewController {
             navigationController?.popViewController(animated: true)
 
         } else {
-            //add new word
             addNewWordDelegate?.didAddNewWord(newWord)
             
             addNewWordDelegate?.reloadData()
@@ -160,7 +150,6 @@ final class AddNewWordController: ViewController {
         }
     }
 }
-//// LoadImages Protocol ViewController
 extension AddNewWordController: LoadImagesProtocolViewController {
     func saveImage(image: UIImage?, url: String?) {
         
@@ -175,7 +164,6 @@ extension AddNewWordController: LoadImagesProtocolViewController {
     }
 }
 
-// MARK: - Gesture Gallery Tap / Alert Tap
 extension AddNewWordController {
     
     private func setupGestureRecognizer() {
@@ -196,9 +184,7 @@ extension AddNewWordController {
         let actionCamera = UIAlertAction(title: "Камера", style: .default)
         let actionPhotoAlbum = UIAlertAction(title: "Фотоальбом", style: .default)
         
-        // MARK: - load VC LoadImagesViewController
-
-        // Load image from unsplash
+s
         let actionURL = UIAlertAction(title: "Интернет", style: .default) { _ in
             if self.editingWord == nil {
                 guard let text = self.learnWord.text else { return }
@@ -225,9 +211,6 @@ extension AddNewWordController {
         if galleryView.image != nil {
             
             let deleteAction = UIAlertAction(title: "Удалить", style: .destructive) { _ in
-//                    StorageManager.shared.update {
-//                        self.currentWord?.image = nil
-//                }
 
                 self.galleryView.image = nil
                 
@@ -267,7 +250,6 @@ extension AddNewWordController {
 extension AddNewWordController: AddNewWordDelegate {
     func getCurrentWord() -> String {
         guard let englishWord = learnWord.text else { return "" }
-        //currentWord
         return englishWord
     }
     

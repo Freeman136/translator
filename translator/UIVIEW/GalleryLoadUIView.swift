@@ -1,9 +1,3 @@
-//
-//  GalleryLoadUIView.swift
-//  FirstProject
-//
-//  Created by Andrew on 05.07.2024.
-//
 
 import UIKit
 
@@ -70,11 +64,7 @@ final class GalleryLoadUIView: UIView {
 }
 
 extension GalleryLoadUIView {
-//    func setupLoadView(image name: String) {
-//        let imageUI = UIImage(named: name)
-//        imageLoad.image = imageUI
-//    }
-    
+
     var image: UIImage? {
         get  { fillImageLoad.image } set { fillImageLoad.image = newValue }
     }

@@ -1,9 +1,3 @@
-//
-//  LoadImagePresenter.swift
-//  FirstProject
-//
-//  Created by Andrew on 07.06.2024.
-//
 
 import Foundation
 
@@ -18,7 +12,6 @@ final class  LoadImagePresenter {
     
     weak var delegate: LoadImagesPresenterDelegate?
     
-//    private var wordsArray: [Word] = []
     private (set) var unsplashPhotoUrlsArray: [UnsplashPhotoUrls] = []
     private var timer: Timer?
     var currentSearchWord: String?
@@ -31,7 +24,7 @@ final class  LoadImagePresenter {
 
 // MARK: Input
 extension LoadImagePresenter {
-    //
+    
     func setIndex(_ indexPath: IndexPath?) {
         selectedIndexPath = indexPath
     }
@@ -92,11 +85,7 @@ extension LoadImagePresenter {
                 
             case .success(let success):
                 totalPages = success.totalPages ?? 0
-                // TODO: - нет картинок добавить оповещение
-                if totalPages == 0 {
-                    print(print("---- Total Pages --- \(totalPages) ------"))
-                    
-                }
+
                 reloadData(success.results ?? [])
                 
             case .failure(let failure):
@@ -130,7 +119,6 @@ extension LoadImagePresenter {
     }
     
     func alertError(_ error: Error) {
-        //        self.delegate?.alertError("Error" as? Error, massage: error.localizedDescription)
         
     }
     
